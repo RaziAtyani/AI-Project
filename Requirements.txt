@@ -1,5 +1,3 @@
-Libraries needed to run the code:
-
 pip install torch
 pip install ntlk
 pip install spacy
