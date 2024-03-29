@@ -1,0 +1,9 @@
+Libraries needed to run the code:
+
+pip install torch
+pip install ntlk
+pip install spacy
+pip install tkinter
+pip install time
+pip install pandas
+pip install sklearn
