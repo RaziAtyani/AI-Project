@@ -17,6 +17,7 @@ df = pd.read_csv("Dataset.csv") #Load csv file into data frame
 
 train_df, test_df = train_test_split(df, test_size=0.2) #Split the data frames, with the test_size being =0.2
 
+#Function to preprocess text (removing numbers and special characters, tokenizing and lowering words)
 def preprocess_text(text):
     text = text.lower() #convert to lower case
     text = ''.join([char if char.isalpha() or char.isspace() else ' ' for char in text])#Remove punctuation
@@ -43,7 +44,7 @@ test_df = test_df.dropna(subset=['label'])
 train_df[['text', 'label']].to_csv("trainDataset.csv", index=False)
 test_df[['text', 'label']].to_csv("testDataset.csv", index=False)
 
-
+#While loop to run the program until the user exits
 while(True):
     op = input("1- Naive Bayes\n2- GRU\n3- LSTM\n")
     op = int(op)
